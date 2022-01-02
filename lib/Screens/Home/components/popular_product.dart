@@ -17,7 +17,7 @@ class PopularProducts extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: (20)),
           child: SectionTitle(title: title1, press: () {}),
         ),
-        SizedBox(height: (20)),
+        SizedBox(height: (2)),
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(

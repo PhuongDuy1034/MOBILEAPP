@@ -87,6 +87,7 @@
 // }
 import 'package:doanltdd/Screens/Home/components/banar.dart';
 import 'package:doanltdd/Screens/Home/components/home_heder.dart';
+import 'package:doanltdd/Screens/Home/components/next.dart';
 import 'package:doanltdd/Screens/Home/components/popular_product.dart';
 import 'package:doanltdd/Screens/Home/components/setion_tittle.dart';
 import 'package:doanltdd/Screens/Home/components/top.dart';
@@ -110,7 +111,7 @@ class Body extends StatelessWidget {
             SizedBox(height: 2),
             PopularProducts(title1: "Sản Phẩm Mới "),
             SizedBox(height: 10),
-            //PopularProducts(title1: "Sản Phẩm Bán Chạy"),
+            next(title1: "IPHONE"),
           ],
         ),
       ),
