@@ -1,3 +1,4 @@
+import 'package:doanltdd/Screens/Details/components/body.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants.dart';
@@ -39,9 +40,6 @@ class Cart extends StatelessWidget {
               Container(
                 width: 140,
                 height: 180,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                ),
                 child: Image.asset("assets/images/login_bottom1.png"),
               ),
             ],
