@@ -1,3 +1,5 @@
+import 'package:doanltdd/Screens/Payment/screen_payment.dart';
+import 'package:doanltdd/Screens/Profile/components/myprofile.dart';
 import 'package:doanltdd/Screens/Profile/profile_screen.dart';
 import 'package:doanltdd/models/Navitem.dart';
 import 'package:flutter/material.dart';
@@ -23,7 +25,7 @@ class MyApp extends StatelessWidget {
         primaryColor: kPrimaryColor,
         scaffoldBackgroundColor: Colors.white,
       ),
-      home: WelcomeScreen(),
+      home: MyProfile(),
     );
   }
 }

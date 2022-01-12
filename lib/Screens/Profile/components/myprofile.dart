@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:doanltdd/constants.dart';
-import 'package:doanltdd/components/rounded_button.dart';
 
-class MyProfile extends StatelessWidget {
-  const MyProfile({
-    Key key,
-  }) : super(key: key);
+class MyProfile extends StatefulWidget {
+  @override
+  State<MyProfile> createState() => _MyProfileState();
+}
 
-  set size(Size size) {}
+class _MyProfileState extends State<MyProfile> {
   Widget textfield({@required hintText}) {
     return Material(
-      elevation: 4,
+      elevation: 5,
       shadowColor: Colors.grey,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10),
@@ -19,7 +18,7 @@ class MyProfile extends StatelessWidget {
         decoration: InputDecoration(
             hintText: hintText,
             hintStyle: const TextStyle(
-              letterSpacing: 2,
+              letterSpacing: 1,
               color: Colors.black54,
               fontWeight: FontWeight.bold,
             ),
@@ -79,9 +78,14 @@ class MyProfile extends StatelessWidget {
                     textfield(
                       hintText: 'ShippingAddress',
                     ),
-                    RoundedButton(
-                      text: "Update",
-                      press: () {},
+                    Container(
+                      width: 200,
+                      height: 50,
+                      child: ElevatedButton(
+                        child: Text("Update"),
+                        style: ElevatedButton.styleFrom(shape: StadiumBorder()),
+                        onPressed: () {},
+                      ),
                     ),
                   ],
                 ),

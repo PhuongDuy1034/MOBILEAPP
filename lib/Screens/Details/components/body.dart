@@ -1,4 +1,6 @@
 import 'package:doanltdd/Screens/Cart/cart_screen.dart';
+import 'package:doanltdd/Screens/Payment/screen_payment.dart';
+import 'package:doanltdd/components/counter.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
@@ -273,7 +275,16 @@ class Body extends StatelessWidget {
                           backgroundColor:
                               MaterialStateProperty.all(Color(0xFFE3F2FD)),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return Payment();
+                              },
+                            ),
+                          );
+                        },
                         child: Text(
                           'Add To Basket',
                           style: TextStyle(
@@ -293,68 +304,68 @@ class Body extends StatelessWidget {
   }
 }
 
-class Counter extends StatefulWidget {
-  @override
-  _CounterState createState() => _CounterState();
-}
+// class Counter extends StatefulWidget {
+//   @override
+//   _CounterState createState() => _CounterState();
+// }
 
-class _CounterState extends State<Counter> {
-  int numOfCount = 1;
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        IconButton(
-          icon: Icon(
-            Icons.remove,
-            color: Colors.black45,
-          ),
-          onPressed: () {
-            setState(() {
-              numOfCount--;
-            });
-          },
-        ),
-        SizedBox(
-          height: 43,
-          width: 37,
-          child: Container(
-            padding: EdgeInsets.symmetric(vertical: 10),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(23),
-              border: Border.all(
-                color: Color(0xFFFECEFF1),
-              ),
-            ),
-            child: Text(
-              numOfCount.toString().padLeft(2, '0'),
-              textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 18),
-            ),
-          ),
-        ),
-        IconButton(
-          icon: Icon(
-            Icons.add,
-            color: Colors.black45,
-          ),
-          onPressed: () {
-            setState(() {
-              numOfCount++;
-            });
-          },
-        ),
-        Spacer(),
-        Icon(
-          Icons.favorite,
-        ),
-        SizedBox(
-          width: 10,
-        ),
-        Icon(
-          Icons.share,
-        ),
-      ],
-    );
-  }
-}
+// class _CounterState extends State<Counter> {
+//   int numOfCount = 1;
+//   @override
+//   Widget build(BuildContext context) {
+//     return Row(
+//       children: [
+//         IconButton(
+//           icon: Icon(
+//             Icons.remove,
+//             color: Colors.black45,
+//           ),
+//           onPressed: () {
+//             setState(() {
+//               numOfCount--;
+//             });
+//           },
+//         ),
+//         SizedBox(
+//           height: 43,
+//           width: 37,
+//           child: Container(
+//             padding: EdgeInsets.symmetric(vertical: 10),
+//             decoration: BoxDecoration(
+//               borderRadius: BorderRadius.circular(23),
+//               border: Border.all(
+//                 color: Color(0xFFFECEFF1),
+//               ),
+//             ),
+//             child: Text(
+//               numOfCount.toString().padLeft(2, '0'),
+//               textAlign: TextAlign.center,
+//               style: TextStyle(fontSize: 18),
+//             ),
+//           ),
+//         ),
+//         IconButton(
+//           icon: Icon(
+//             Icons.add,
+//             color: Colors.black45,
+//           ),
+//           onPressed: () {
+//             setState(() {
+//               numOfCount++;
+//             });
+//           },
+//         ),
+//         Spacer(),
+//         Icon(
+//           Icons.favorite,
+//         ),
+//         SizedBox(
+//           width: 10,
+//         ),
+//         Icon(
+//           Icons.share,
+//         ),
+//       ],
+//     );
+//   }
+// }
