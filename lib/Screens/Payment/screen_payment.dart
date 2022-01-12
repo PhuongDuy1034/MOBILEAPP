@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 import 'component/body.dart';
 
 class Payment extends StatelessWidget {
@@ -9,6 +10,7 @@ class Payment extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Body(),
+     
     );
   }
 }
