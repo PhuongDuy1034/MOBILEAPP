@@ -29,182 +29,178 @@ class _BodyState extends State<Body> {
         ),
       ),
       body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.all(2),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-                child: TextButton(
-                  style: TextButton.styleFrom(
-                    padding: EdgeInsets.all(20),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(1)),
-                    backgroundColor: Color(0xFFF5F6F9),
-                  ),
-                  onPressed: () {},
-                  child: Row(
-                    children: [
-                      Icon(Icons.room_outlined),
-                      SizedBox(width: 20),
-                      Expanded(child: Text("17 nguyễn huệ,quận 1,TPHCM")),
-                      Icon(Icons.arrow_forward_ios),
-                    ],
-                  ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              child: TextButton(
+                style: TextButton.styleFrom(
+                  padding: EdgeInsets.all(20),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(1)),
+                  backgroundColor: Color(0xFFF5F6F9),
                 ),
-              ),
-              Row(
-                children: [
-                  Image.asset(
-                    "assets/images/ip131.jpg",
-                    width: 150,
-                    height: 150,
-                  ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Iphone 13 pro max',
-                        style: TextStyle(
-                          fontSize: 19,
-                        ),
-                      ),
-                      SizedBox(
-                        height: 50,
-                      ),
-                      Text('13.000.000đ')
-                    ],
-                  ),
-                  Count(),
-                ],
-              ),
-              Padding(
-                padding: const EdgeInsets.all(10),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                onPressed: () {},
+                child: Row(
                   children: [
-                    Container(
-                      child: Text(
-                        'Phương thức thanh toán',
-                        style: TextStyle(fontSize: 22),
-                      ),
-                    ),
-                    Column(
-                      children: [
-                        RadioListTile(
-                          title: Text('Tiền mặt'),
-                          value: thanhtoan.tm,
-                          groupValue: _thanhtoan,
-                          onChanged: (thanhtoan value) {
-                            setState(() {
-                              _thanhtoan = value;
-                            });
-                          },
-                        ),
-                        RadioListTile(
-                          title: Text('Thẻ tín dụng'),
-                          value: thanhtoan.ttd,
-                          groupValue: _thanhtoan,
-                          onChanged: (thanhtoan value) {
-                            setState(() {
-                              _thanhtoan = value;
-                            });
-                          },
-                        ),
-                      ],
-                    )
+                    Icon(Icons.room_outlined),
+                    SizedBox(width: 20),
+                    Expanded(child: Text("17 nguyễn huệ,quận 1,TPHCM")),
+                    Icon(Icons.arrow_forward_ios),
                   ],
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(10),
-                child: Column(
+            ),
+            Row(
+              children: [
+                Image.asset(
+                  "assets/images/ip131.jpg",
+                  width: 150,
+                  height: 150,
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Container(
-                      child: Text(
-                        'Voucher',
-                        style: TextStyle(fontSize: 22),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(10),
-                      child: TextField(
-                        decoration: InputDecoration(
-                            hintText: "nhập mã voucher",
-                            hintStyle: const TextStyle(
-                              letterSpacing: 2,
-                              color: Colors.black54,
-                              fontWeight: FontWeight.bold,
-                            ),
-                            fillColor: Colors.brown,
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(10.0),
-                            )),
+                    Text(
+                      'Iphone 13 pro max',
+                      style: TextStyle(
+                        fontSize: 19,
                       ),
                     ),
                     SizedBox(
-                      height: 20,
+                      height: 50,
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          'Tổng tiền: ',
-                          style: TextStyle(
-                            fontSize: 27,
-                            color: Colors.red,
-                          ),
-                        ),
-                        Text(
-                          '13.000.000đ',
-                          style: TextStyle(fontSize: 20),
-                        )
-                      ],
-                    )
+                    Text('13.000.000đ')
                   ],
                 ),
-              ),
-              Align(
-                alignment: Alignment.bottomRight,
-                child: Container(
-                  width: 100,
-                  height: 50,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      setState(() {
-                        showDialog(
-                            context: context,
-                            builder: (context) {
-                              return AlertDialog(
-                                title: const Text("Thông báo"),
-                                content: Text('Đặt hàng thành công'),
-                                actions: [
-                                  TextButton(
-                                    onPressed: () =>
-                                        Navigator.pop(context, 'Ok'),
-                                    child: const Text('Ok'),
-                                  ),
-                                ],
-                              );
-                            });
-                      });
-                    },
+                Count(),
+              ],
+            ),
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
                     child: Text(
-                      'Đặt hàng',
-                      style: TextStyle(fontSize: 15),
+                      'Phương thức thanh toán',
+                      style: TextStyle(fontSize: 22),
                     ),
-                    style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all<Color>(Colors.red)),
                   ),
+                  Column(
+                    children: [
+                      RadioListTile(
+                        title: Text('Tiền mặt'),
+                        value: thanhtoan.tm,
+                        groupValue: _thanhtoan,
+                        onChanged: (thanhtoan value) {
+                          setState(() {
+                            _thanhtoan = value;
+                          });
+                        },
+                      ),
+                      RadioListTile(
+                        title: Text('Thẻ tín dụng'),
+                        value: thanhtoan.ttd,
+                        groupValue: _thanhtoan,
+                        onChanged: (thanhtoan value) {
+                          setState(() {
+                            _thanhtoan = value;
+                          });
+                        },
+                      ),
+                    ],
+                  )
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(10),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                    child: Text(
+                      'Voucher',
+                      style: TextStyle(fontSize: 22),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: TextField(
+                      decoration: InputDecoration(
+                          hintText: "nhập mã voucher",
+                          hintStyle: const TextStyle(
+                            letterSpacing: 2,
+                            color: Colors.black54,
+                            fontWeight: FontWeight.bold,
+                          ),
+                          fillColor: Colors.brown,
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                          )),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Tổng tiền: ',
+                        style: TextStyle(
+                          fontSize: 27,
+                          color: Colors.red,
+                        ),
+                      ),
+                      Text(
+                        '13.000.000đ',
+                        style: TextStyle(fontSize: 20),
+                      )
+                    ],
+                  )
+                ],
+              ),
+            ),
+            Align(
+              alignment: Alignment.bottomRight,
+              child: Container(
+                width: 100,
+                height: 50,
+                child: ElevatedButton(
+                  onPressed: () {
+                    setState(() {
+                      showDialog(
+                          context: context,
+                          builder: (context) {
+                            return AlertDialog(
+                              title: const Text("Thông báo"),
+                              content: Text('Đặt hàng thành công'),
+                              actions: [
+                                TextButton(
+                                  onPressed: () => Navigator.pop(context, 'Ok'),
+                                  child: const Text('Ok'),
+                                ),
+                              ],
+                            );
+                          });
+                    });
+                  },
+                  child: Text(
+                    'Đặt hàng',
+                    style: TextStyle(fontSize: 15),
+                  ),
+                  style: ButtonStyle(
+                      backgroundColor:
+                          MaterialStateProperty.all(Color(0xFF03A9F4))),
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

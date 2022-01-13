@@ -1,3 +1,4 @@
+import 'package:doanltdd/Screens/Cart/cart_screen.dart';
 import 'package:doanltdd/Screens/Home/home_screen.dart';
 import 'package:doanltdd/Screens/Profile/profile_screen.dart';
 import 'package:flutter/material.dart';
@@ -41,7 +42,12 @@ class Navbar1 extends StatelessWidget {
             ),
           ),
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Cart()),
+              );
+            },
             icon: SvgPicture.asset(
               "assets/icons/Cart Icon.svg",
               height: 22,

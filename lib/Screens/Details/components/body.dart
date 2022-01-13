@@ -18,10 +18,7 @@ class Body extends StatelessWidget {
           // Image.asset('assets/images/save.png'),
 
           IconButton(
-            icon: Icon(
-              Icons.shopping_cart,
-              size: 40,
-            ),
+            icon: Icon(Icons.shopping_cart, size: 40, color: Colors.black),
             onPressed: () {
               Navigator.push(
                 context,
@@ -39,7 +36,7 @@ class Body extends StatelessWidget {
         ],
         leading: IconButton(
           icon: Icon(
-            Icons.arrow_back_ios,
+            Icons.arrow_back,
             color: Colors.black,
           ),
           onPressed: () {
@@ -85,13 +82,6 @@ class Body extends StatelessWidget {
                             fontWeight: FontWeight.w500,
                           ),
                         ),
-                        Text(
-                          "\$${"3000"}",
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
                       ],
                     ),
                     Row(children: [
@@ -111,6 +101,13 @@ class Body extends StatelessWidget {
                         "assets/images/star.png",
                       ),
                     ]),
+                    Text(
+                      "13.000.000đ",
+                      style: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
                     SizedBox(height: 10),
                     Counter(),
                     SizedBox(height: 10),
@@ -280,7 +277,7 @@ class Body extends StatelessWidget {
                             context,
                             MaterialPageRoute(
                               builder: (context) {
-                                return Payment();
+                                return Cart();
                               },
                             ),
                           );
