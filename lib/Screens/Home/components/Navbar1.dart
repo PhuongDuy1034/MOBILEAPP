@@ -1,4 +1,5 @@
 import 'package:doanltdd/Screens/Cart/cart_screen.dart';
+import 'package:doanltdd/Screens/DanhMuc/danhmuc_screen.dart';
 import 'package:doanltdd/Screens/Home/home_screen.dart';
 import 'package:doanltdd/Screens/Profile/profile_screen.dart';
 import 'package:doanltdd/Screens/ordermanagement/orderma_screen.dart';
@@ -35,9 +36,13 @@ class Navbar1 extends StatelessWidget {
             ),
           ),
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => DanhMuc()),
+              );},
             icon: SvgPicture.asset(
-              "assets/icons/Heart Icon_2.svg",
+              "assets/icons/th-large-solid.svg",
               height: 22,
               color: Color(0xFF03A9F4),
             ),

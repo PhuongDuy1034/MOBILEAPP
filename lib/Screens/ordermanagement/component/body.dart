@@ -62,35 +62,35 @@ class _Categories1State extends State<Categories1>with SingleTickerProviderState
                 Tab(
                   child: Text('Đơn Mới Đặt',
                   style: TextStyle(
-                    fontSize: 21,
+                    fontSize: 19,
                    ),
                   ),
                 ),
                 Tab(
                   child: Text('Đơn Đã Xử Lý',
                   style: TextStyle(
-                    fontSize: 21,
+                    fontSize: 19,
                    ),
                   ),
                 ),
                 Tab(
                   child: Text('Đơn Đang Vận Chuyển',
                   style: TextStyle(
-                    fontSize: 21,
+                    fontSize: 19,
                    ),
                   ),
                 ),
                 Tab(
                   child: Text('Đã Giao',
                   style: TextStyle(
-                    fontSize: 21,
+                    fontSize: 19,
                    ),
                   ),
                 ),
                 Tab(
                   child: Text('Đã Hủy',
                   style: TextStyle(
-                    fontSize: 21,
+                    fontSize: 19,
                    ),
                   ),
                 ),

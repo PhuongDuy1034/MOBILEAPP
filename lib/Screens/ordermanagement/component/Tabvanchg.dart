@@ -13,7 +13,7 @@ class vanChuyen extends StatelessWidget {
 
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              SizedBox(height: 150),
+              SizedBox(height: 200),
           Padding(
          padding: const EdgeInsets.symmetric(horizontal: 120),
          child: Image.asset("assets/images/X.png",

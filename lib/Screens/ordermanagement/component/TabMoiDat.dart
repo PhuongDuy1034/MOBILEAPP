@@ -16,7 +16,7 @@ class Moidat extends StatelessWidget {
               SizedBox(height: 150),
           Padding(
          padding: const EdgeInsets.symmetric(horizontal: 120),
-         child: Image.asset("assets/images/R.png",
+         child: Image.asset("assets/images/R1.png",
                   color: kPrimaryColor,
                   width: size.width * 1),
                 
