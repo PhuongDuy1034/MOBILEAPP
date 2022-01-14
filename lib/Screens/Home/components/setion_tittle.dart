@@ -1,3 +1,4 @@
+import 'package:doanltdd/Screens/Cart/cart_screen.dart';
 import 'package:flutter/material.dart';
 
 class SectionTitle extends StatelessWidget {
@@ -25,10 +26,20 @@ class SectionTitle extends StatelessWidget {
             ),
           ),
           GestureDetector(
-            onTap: press,
-            child: Text(
-              "See More",
-              style: TextStyle(color: Color(0xFFBBBBBB)),
+            onTap: () {
+              // Navigator.push(
+              //   context,
+              //   MaterialPageRoute(builder: (context) => Cart()),
+              // );
+            },
+            child: Row(
+              children: [
+                Text(
+                  "See More",
+                  style: TextStyle(color: Color(0xFFBBBBBB)),
+                ),
+                Icon(Icons.chevron_right, color: Color(0xFFBBBBBB)),
+              ],
             ),
           ),
         ],
