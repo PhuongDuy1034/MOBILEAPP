@@ -1,5 +1,6 @@
 import 'package:doanltdd/Screens/Home/home_screen.dart';
 import 'package:doanltdd/Screens/Profile/profile_screen.dart';
+import 'package:doanltdd/Screens/ordermanagement/orderma_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -49,9 +50,14 @@ class Navbar1 extends StatelessWidget {
             ),
           ),
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+               Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Orderma()),
+              );
+            },
             icon: SvgPicture.asset(
-              "assets/icons/chat1.svg",
+              "assets/icons/box-solid.svg",
               height: 22,
               color: Color(0xFF03A9F4),
             ),
